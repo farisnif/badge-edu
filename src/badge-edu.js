@@ -15,11 +15,13 @@ export class BadgeEdu extends LitElement {
     } */
 
     .accord-header {
+      display: flex;
+      align-items: center;
       background: #a5cdf0;
-      border-radius: 4px;
+      border-radius: 6px;
       color: black;
-      padding: 1rem 1.25rem;
-      
+      padding 1rem 1.25rem;
+      height: 60px;
 
       cursor: pointer;
 
@@ -49,13 +51,13 @@ export class BadgeEdu extends LitElement {
     }
     .image {
       height: 40px;
-      width: 40px;
       /* float: left; */
-      display: inline-block;
+      margin-right: 10px;
     }
     .accord-title {
       /* float: left; */
       display: inline-block;
+      border-radius: 6px;
     }
       `;
   }
