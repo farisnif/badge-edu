@@ -17,12 +17,12 @@ export class BadgeEdu extends LitElement {
     .accord-header {
       display: flex;
       align-items: center;
-      background: #a5cdf0;
+      background: #cfe6f4;
       padding-left: 2px;
       border-radius: 6px;
       color: black;
       height: 60px;
-      border-left: 10px solid blue;
+      border-left: 15px solid #3e98d3;
 
       cursor: pointer;
 
