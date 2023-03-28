@@ -9,16 +9,17 @@ export class BadgeEdu extends LitElement {
     return css`
           /* * {
       padding: 2px;
-      margin: 0;
+      margin: 0 auto;
       box-sizing: border-box;
       border-radius: 4px;
     } */
 
     .accord-header {
       background: #a5cdf0;
-      border-radius: 6px blue;
+      border-radius: 4px;
       color: black;
       padding: 1rem 1.25rem;
+      
 
       cursor: pointer;
 
@@ -31,7 +32,7 @@ export class BadgeEdu extends LitElement {
       transform-origin: top;
     }
     .accord-body {
-      padding: 2rem 1.25rem;
+      padding: 3rem 1.25rem;
 
     }
     .accord-item {
@@ -48,6 +49,7 @@ export class BadgeEdu extends LitElement {
     }
     .image {
       height: 40px;
+      width: 40px;
       /* float: left; */
       display: inline-block;
     }

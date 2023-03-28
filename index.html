@@ -16,10 +16,14 @@
       background-color: #ededed;
     }
   </style>
-  <title>badge-edu</title>
+  <title>Mission | Amazon Web Services Intro | Penn State Digital Badges</title>
 </head>
 
 <body>
+  <form>
+    <input type="text" id="search-input">
+    <button type="submit">Search</button>
+  </form>
   <badge-edu></badge-edu>
   <badge-edu></badge-edu>
   <badge-edu></badge-edu>
@@ -49,6 +53,16 @@ function toggelItem() {
     currentContentEle.classList.remove("collapse");
   }
 }
+
+//search bar JS
+const form = document.querySelector('form');
+  const input = document.querySelector('#search-input');
+
+  form.addEventListener('submit', (event) => {
+    event.preventDefault();
+    const searchTerm = input.value;
+    // Call a server-side script to perform the search and return HTML results
+  });
   </script>
 </body>
 
