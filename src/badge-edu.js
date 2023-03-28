@@ -18,10 +18,11 @@ export class BadgeEdu extends LitElement {
       display: flex;
       align-items: center;
       background: #a5cdf0;
+      padding-left: 2px;
       border-radius: 6px;
       color: black;
-      padding 1rem 1.25rem;
       height: 60px;
+      border-left: 10px solid blue;
 
       cursor: pointer;
 
@@ -53,6 +54,8 @@ export class BadgeEdu extends LitElement {
       height: 40px;
       /* float: left; */
       margin-right: 10px;
+      padding-left: 10px;
+  
     }
     .accord-title {
       /* float: left; */
