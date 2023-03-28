@@ -30,12 +30,14 @@ export class BadgeEdu extends LitElement {
     .accord-content {
       /* height: 120px; */
       /* overflow: hidden; */
-      transition: all 0.35s ease-out;
+      transition: all 0.20s ease-out;
       transform: scaleY(1);
       transform-origin: top;
     }
     .accord-body {
       padding: 3rem 1.25rem;
+      border-left: 15px solid #3e98d3;
+      border-radius: 6px;
 
     }
     .accord-item {
