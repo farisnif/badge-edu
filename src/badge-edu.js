@@ -8,23 +8,20 @@ export class BadgeEdu extends LitElement {
   static get styles() {
     return css`
           * {
-      padding: 0;
+      padding: 2px;
       margin: 0;
       box-sizing: border-box;
+      border-radius: 4px;
     }
 
-    .accordion-container {
-      background: #c00a0a;
-      width: 400px;
-      border: 1px solid #ccc;
-      margin-top: 80px;
-      padding: 20px;
-    }
     .accord-header {
-      background: black;
-      color: #fff;
+      background: #a5cdf0;
+      border-radius: 6px blue;
+      color: black;
       padding: 1rem 1.25rem;
+
       cursor: pointer;
+
     }
     .accord-content {
       height: 120px;
@@ -34,10 +31,12 @@ export class BadgeEdu extends LitElement {
       transform-origin: top;
     }
     .accord-body {
-      padding: 1rem 1.25rem;
+      padding: 2rem 1.25rem;
+
     }
     .accord-item {
-      border-bottom: 1px solid #ccc;
+      margin: 0 auto;
+      width: 95%;
     }
     .accord-item:last-of-type {
       border: none;
@@ -80,11 +79,17 @@ export class BadgeEdu extends LitElement {
 
   render() {
     return html`
-     <h1>Badge (5)</h1>
       <div class="accord-item">
         <div class="accord-header">
-          <div class="acccord-title">Accordion Item #1</div>
+          <div class="acccord-title">Amazon Cognito</div>
         </div>
+        <div class="accord-content collapse">
+          <div class="accord-body">
+          Learn the basics of how Amazon Cognito works, and how you can use it to create User Sign In, Sign In, Access Control, User Pools, and Identity Pools
+          </div>
+        </div>
+      </div>
+      
         <div class="accord-content collapse">
           <div class="accord-body">
             Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ducimus,
@@ -94,23 +99,7 @@ export class BadgeEdu extends LitElement {
           </div>
         </div>
       </div>
-      <div class="accord-item">
-        <div class="accord-header">
-          <div class="acccord-title">Accordion Item #2</div>
-        </div>
-        <div class="accord-content collapse">
-          <div class="accord-body">
-            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ducimus,
-            dolor neque! Accusamus mollitia, cumque harum iste nesciunt unde
-            natus incidunt eius non explicabo sed vel voluptas facilis ad minus
-            consequuntur!
-          </div>
-        </div>
-      </div>
-      <div class="accord-item">
-        <div class="accord-header">
-          <div class="acccord-title">Accordion Item #3</div>
-        </div>
+      
         <div class="accord-content collapse">
           <div class="accord-body">
             Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ducimus,
