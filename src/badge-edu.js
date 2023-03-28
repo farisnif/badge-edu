@@ -7,12 +7,12 @@ export class BadgeEdu extends LitElement {
 
   static get styles() {
     return css`
-          * {
+          /* * {
       padding: 2px;
       margin: 0;
       box-sizing: border-box;
       border-radius: 4px;
-    }
+    } */
 
     .accord-header {
       background: #a5cdf0;
@@ -24,7 +24,7 @@ export class BadgeEdu extends LitElement {
 
     }
     .accord-content {
-      height: 120px;
+      /* height: 120px; */
       /* overflow: hidden; */
       transition: all 0.35s ease-out;
       transform: scaleY(1);
@@ -36,6 +36,7 @@ export class BadgeEdu extends LitElement {
     }
     .accord-item {
       margin: 0 auto;
+      padding: 5px;
       width: 95%;
     }
     .accord-item:last-of-type {
@@ -47,7 +48,12 @@ export class BadgeEdu extends LitElement {
     }
     .image {
       height: 40px;
-      float: left;
+      /* float: left; */
+      display: inline-block;
+    }
+    .accord-title {
+      /* float: left; */
+      display: inline-block;
     }
       `;
   }
@@ -86,7 +92,8 @@ export class BadgeEdu extends LitElement {
       <div class="accord-item">
         <div class="accord-header">
           <img class="image" src = "https://www.drupal.org/files/styles/grid-3-2x/public/project-images/553dbabbd287c26ca83aef42.jpg?itok=ruAqqobg"/>
-          <div class="acccord-title">Amazon Cognito</div>
+          
+          <div class="accord-title">Amazon Cognito</div>
         </div>
         <div class="accord-content collapse">
           <div class="accord-body">
@@ -94,7 +101,6 @@ export class BadgeEdu extends LitElement {
           </div>
         </div>
       </div>
-      
         <!-- <div class="accord-content collapse">
           <div class="accord-body">
             Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ducimus,
