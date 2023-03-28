@@ -21,7 +21,7 @@ export class BadgeEdu extends LitElement {
       padding-left: 2px;
       border-radius: 6px;
       color: black;
-      height: 60px;
+      height: 50px;
       border-left: 15px solid #3e98d3;
 
       cursor: pointer;
