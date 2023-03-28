@@ -25,7 +25,7 @@ export class BadgeEdu extends LitElement {
     }
     .accord-content {
       height: 120px;
-      overflow: hidden;
+      /* overflow: hidden; */
       transition: all 0.35s ease-out;
       transform: scaleY(1);
       transform-origin: top;
@@ -44,6 +44,10 @@ export class BadgeEdu extends LitElement {
     .collapse {
       height: 0px;
       transform: scaleY(0);
+    }
+    .image {
+      height: 40px;
+      float: left;
     }
       `;
   }
@@ -81,6 +85,7 @@ export class BadgeEdu extends LitElement {
     return html`
       <div class="accord-item">
         <div class="accord-header">
+          <img class="image" src = "https://www.drupal.org/files/styles/grid-3-2x/public/project-images/553dbabbd287c26ca83aef42.jpg?itok=ruAqqobg"/>
           <div class="acccord-title">Amazon Cognito</div>
         </div>
         <div class="accord-content collapse">
@@ -90,7 +95,7 @@ export class BadgeEdu extends LitElement {
         </div>
       </div>
       
-        <div class="accord-content collapse">
+        <!-- <div class="accord-content collapse">
           <div class="accord-body">
             Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ducimus,
             dolor neque! Accusamus mollitia, cumque harum iste nesciunt unde
@@ -108,7 +113,7 @@ export class BadgeEdu extends LitElement {
             consequuntur!
           </div>
         </div>
-      </div>
+      </div> -->
     `;
   }
 }
