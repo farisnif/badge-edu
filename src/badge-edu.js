@@ -13,6 +13,10 @@ export class BadgeEdu extends LitElement {
       box-sizing: border-box;
       border-radius: 4px;
     } */
+    .accordion-container{
+      background-size: 100%;
+      background-color: white;
+    }
 
     .accord-header {
       display: flex;
@@ -23,10 +27,11 @@ export class BadgeEdu extends LitElement {
       color: black;
       height: 50px;
       border-left: 15px solid #3e98d3;
-
+      border-right: 1px solid #2077c4ca;
+      border-top: 1px solid #2077c4ca;
       cursor: pointer;
-
     }
+
     .accord-content {
       /* height: 120px; */
       /* overflow: hidden; */
@@ -34,31 +39,41 @@ export class BadgeEdu extends LitElement {
       transform: scaleY(1);
       transform-origin: top;
     }
+
     .accord-body {
-      padding: 3rem 1.25rem;
+      padding: 22px;
       border-left: 15px solid #3e98d3;
       border-radius: 6px;
-
+      color: #333333;
+      font-family: "effra", sans-serif;
+      font-size: 14px;
+      direction: ltr;
+      border-bottom: 1px solid #2077c4ca;
+      border-right: 1px solid #2077c4ca;
     }
+
     .accord-item {
       margin: 0 auto;
       padding: 5px;
       width: 95%;
     }
+
     .accord-item:last-of-type {
       border: none;
     }
+
     .collapse {
       height: 0px;
       transform: scaleY(0);
     }
+
     .image {
       height: 40px;
       /* float: left; */
       margin-right: 10px;
       padding-left: 10px;
-  
     }
+    
     .accord-title {
       /* float: left; */
       display: inline-block;
@@ -98,6 +113,7 @@ export class BadgeEdu extends LitElement {
 
   render() {
     return html`
+          <div class="accordion-container">
       <div class="accord-item">
         <div class="accord-header">
           <img class="image" src = "https://www.drupal.org/files/styles/grid-3-2x/public/project-images/553dbabbd287c26ca83aef42.jpg?itok=ruAqqobg"/>
@@ -110,6 +126,7 @@ export class BadgeEdu extends LitElement {
           </div>
         </div>
       </div>
+  </div>
         <!-- <div class="accord-content collapse">
           <div class="accord-body">
             Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ducimus,
