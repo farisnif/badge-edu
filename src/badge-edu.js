@@ -110,6 +110,7 @@ export class BadgeEdu extends LitElement {
       }
     }
   }
+  
 
   render() {
     return html`
