@@ -96,6 +96,10 @@ export class BadgeEdu extends LitElement {
     .badgeCountHeader{
        font-size: 20px;
     }
+
+    .link{
+      margin-top: 20px;
+    }
       `;
   }
 
@@ -141,7 +145,11 @@ export class BadgeEdu extends LitElement {
           <img class="dropDown" src = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB4AAAAeCAYAAAA7MK6iAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAd0lEQVR4nO3UQQqAIBBA0b8bvVci6Qm6/0WCmCBchOXoaj4IIujDhYLned7iArABWedLEmAHDh0ViLPRABQFSzMPK25aFWrX4gr0bhouL+g0XDpQc1w+oGa4/ECHcRlAh/Bs9Dafbz73bEiGX2HQs5LBWZ7neVydFqwUt0OcXE8AAAAASUVORK5CYII="/>
         </div>
         <div class="accord-content collapse">
-          <div class="accord-body">${this.badgeDescription}</div>
+          <div class="accord-body">${this.badgeDescription}
+          
+          <div class="link"> <a href="link"> https://docs.aws.amazon.com/cognito/latest/developerguide/tutorials.html </a> </div>
+        </div>
+          
         </div>
       </div>
   </div>
