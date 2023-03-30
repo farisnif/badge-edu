@@ -142,25 +142,6 @@ export class BadgeEdu extends LitElement {
         </div>
       </div>
   </div>
-        <!-- <div class="accord-content collapse">
-          <div class="accord-body">
-            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ducimus,
-            dolor neque! Accusamus mollitia, cumque harum iste nesciunt unde
-            natus incidunt eius non explicabo sed vel voluptas facilis ad minus
-            consequuntur!
-          </div>
-        </div>
-      </div>
-      
-        <div class="accord-content collapse">
-          <div class="accord-body">
-            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ducimus,
-            dolor neque! Accusamus mollitia, cumque harum iste nesciunt unde
-            natus incidunt eius non explicabo sed vel voluptas facilis ad minus
-            consequuntur!
-          </div>
-        </div>
-      </div> -->
     `;
   }
 }
