@@ -148,6 +148,7 @@ export class BadgeEdu extends LitElement {
           <div class="accord-body">${this.badgeDescription}
           
           <div class="link"> <a href="link"> https://docs.aws.amazon.com/cognito/latest/developerguide/tutorials.html </a> </div>
+          <div class="link"> <a href="link"> https://docs.aws.amazon.com/cognito/latest/developerguide/tutorials.html </a> </div>
         </div>
           
         </div>
