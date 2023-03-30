@@ -1,4 +1,4 @@
-import {LitElement, html, css} from 'lit';
+import { LitElement, html, css } from 'lit';
 
 export class BadgeEdu extends LitElement {
   static properties = {
@@ -44,7 +44,11 @@ export class BadgeEdu extends LitElement {
     .accord-body {
       padding: 22px;
       border-left: 15px solid #3e98d3;
-      border-radius: 6px;
+      /* border-radius: 6px; */
+      /* border-top-left-radius: 0px;
+      border-top-right-radius: 0px;
+      border-bottom-left-radius: 6px;
+      border-bottom-right-radius: 6px; */
       color: #333333;
       font-family: "effra", sans-serif;
       font-size: 14px;
@@ -57,6 +61,7 @@ export class BadgeEdu extends LitElement {
       margin: 0 auto;
       padding: 5px;
       width: 95%;
+      /* border-radius: 6px; */
     }
 
     .accord-item:last-of-type {
@@ -78,7 +83,7 @@ export class BadgeEdu extends LitElement {
     .accord-title {
       /* float: left; */
       display: inline-block;
-      border-radius: 6px;
+      /* border-radius: 6px; */
     }
     .dropDown {
       position: absolute;
@@ -114,46 +119,49 @@ export class BadgeEdu extends LitElement {
   }
 
   firstUpdated() {
-    const accordHeaders = this.shadowRoot.querySelectorAll(".accord-header");
-    accordHeaders.forEach((ach) => {
-      ach.addEventListener("click", () => {
-        const currentContentEle = ach.nextElementSibling;
-        const isCollapsed = currentContentEle.classList.contains("collapse");
-  
-        accordHeaders.forEach((header) => {
-          header.querySelector('.dropDown').classList.remove('rotate');
-          header.nextElementSibling.classList.add('collapse');
-        });
-  
-        if (isCollapsed) {
-          currentContentEle.classList.remove("collapse");
-          ach.querySelector('.dropDown').classList.add('rotate');
-        }
-      }, false);
-    });
+    const ach = this.shadowRoot.querySelector(".accord-header");
+    ach.addEventListener("click", () => {
+      const accordianContent = ach.nextElementSibling;
+      const accorianImg = ach.querySelector('.dropDown');
+
+      accordianContent.classList.toggle("collapse");
+      accorianImg.classList.toggle('rotate');
+
+      if (accordianContent.classList.contains('collapse')) {
+        ach.style.borderRadius = "6px";
+      }
+      else {
+        ach.style.borderRadius = "6px 6px 0px 0px";
+        accordianContent.querySelector('.accord-body').style.borderRadius = "0px 0px 6px 6px";
+      }
+
+    }, false);
   }
-  
-  
+
+
 
   render() {
     return html`
-          <div class="accordion-container">
-      <div class="accord-item">
-        <div class="accord-header">
-          <img class="image" src = "${this.badgeIcon}"/>
-          <div class="accord-title">${this.badgeName}</div>
-          <img class="dropDown" src = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB4AAAAeCAYAAAA7MK6iAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAd0lEQVR4nO3UQQqAIBBA0b8bvVci6Qm6/0WCmCBchOXoaj4IIujDhYLned7iArABWedLEmAHDh0ViLPRABQFSzMPK25aFWrX4gr0bhouL+g0XDpQc1w+oGa4/ECHcRlAh/Bs9Dafbz73bEiGX2HQs5LBWZ7neVydFqwUt0OcXE8AAAAASUVORK5CYII="/>
-        </div>
-        <div class="accord-content collapse">
-          <div class="accord-body">${this.badgeDescription}
-          
-          <div class="link"> <a href="link"> https://docs.aws.amazon.com/cognito/latest/developerguide/tutorials.html </a> </div>
-          <div class="link"> <a href="link"> https://docs.aws.amazon.com/cognito/latest/developerguide/tutorials.html </a> </div>
-        </div>
-          
+      <div class="accordion-container">
+        <div class="accord-item">
+          <div class="accord-header">
+            <img class="image" src="${this.badgeIcon}" />
+            <div class="accord-title">${this.badgeName}</div>
+            <img class="dropDown"
+              src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB4AAAAeCAYAAAA7MK6iAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAd0lEQVR4nO3UQQqAIBBA0b8bvVci6Qm6/0WCmCBchOXoaj4IIujDhYLned7iArABWedLEmAHDh0ViLPRABQFSzMPK25aFWrX4gr0bhouL+g0XDpQc1w+oGa4/ECHcRlAh/Bs9Dafbz73bEiGX2HQs5LBWZ7neVydFqwUt0OcXE8AAAAASUVORK5CYII=" />
+          </div>
+          <div class="accord-content collapse">
+            <div class="accord-body">${this.badgeDescription}
+      
+              <div class="link"> <a href="link"> https://docs.aws.amazon.com/cognito/latest/developerguide/tutorials.html </a>
+              </div>
+              <div class="link"> <a href="link"> https://docs.aws.amazon.com/cognito/latest/developerguide/tutorials.html </a>
+              </div>
+            </div>
+      
+          </div>
         </div>
       </div>
-  </div>
     `;
   }
 }
