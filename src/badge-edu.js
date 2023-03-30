@@ -99,6 +99,10 @@ export class BadgeEdu extends LitElement {
   constructor() {
     super();
     this.version = 'STARTING';
+    this.badgeName = 'Amazon Cognito';
+    this.badgeIcon = new URL(
+      "https://www.drupal.org/files/styles/grid-3-2x/public/project-images/553dbabbd287c26ca83aef42.jpg?itok=ruAqqobg"
+    ).href;
   }
 
   firstUpdated() {
@@ -128,8 +132,8 @@ export class BadgeEdu extends LitElement {
           <div class="accordion-container">
       <div class="accord-item">
         <div class="accord-header">
-          <img class="image" src = "https://www.drupal.org/files/styles/grid-3-2x/public/project-images/553dbabbd287c26ca83aef42.jpg?itok=ruAqqobg"/>
-          <div class="accord-title">Amazon Cognito</div>
+          <img class="image" src = "${this.badgeIcon}"/>
+          <div class="accord-title">${this.badgeName}</div>
           <img class="dropDown" src = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB4AAAAeCAYAAAA7MK6iAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAd0lEQVR4nO3UQQqAIBBA0b8bvVci6Qm6/0WCmCBchOXoaj4IIujDhYLned7iArABWedLEmAHDh0ViLPRABQFSzMPK25aFWrX4gr0bhouL+g0XDpQc1w+oGa4/ECHcRlAh/Bs9Dafbz73bEiGX2HQs5LBWZ7neVydFqwUt0OcXE8AAAAASUVORK5CYII="/>
         </div>
         <div class="accord-content collapse">
