@@ -93,6 +93,9 @@ export class BadgeEdu extends LitElement {
       transition: transform 0.2s ease-in-out;
     }
 
+    .badgeCountHeader{
+       font-size: 20px;
+    }
       `;
   }
 
