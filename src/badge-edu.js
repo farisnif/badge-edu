@@ -104,39 +104,21 @@ export class BadgeEdu extends LitElement {
   firstUpdated() {
     const accordHeaders = this.shadowRoot.querySelectorAll(".accord-header");
     accordHeaders.forEach((ach) => {
-      ach.addEventListener("click", toggelItem, false);
-    });
-
-    function toggelItem() {
-      const currentContentEle = this.nextElementSibling;
-
-      const isCollapsed = currentContentEle.classList.contains("collapse");
-
-      accordHeaders.forEach((ach) => {
-        const contentEle = ach.nextElementSibling;
-        if (!contentEle.classList.contains("collapse")) {
-          contentEle.classList.add("collapse");
-        }
-      });
-
-      if (isCollapsed) {
-        currentContentEle.classList.remove("collapse");
-      }
-
-      accordHeaders.forEach(header => {
-        header.addEventListener('click', () => {
-          const dropdownImage = header.querySelector('.dropDown');
-      
-          // toggle the 'rotate' class on the dropdown image
-          dropdownImage.classList.toggle('rotate');
-          
-          // toggle the 'active' class on the accord content
-          const accordContent = header.nextElementSibling;
-          accordContent.classList.toggle('active');
+      ach.addEventListener("click", () => {
+        const currentContentEle = ach.nextElementSibling;
+        const isCollapsed = currentContentEle.classList.contains("collapse");
+  
+        accordHeaders.forEach((header) => {
+          header.querySelector('.dropDown').classList.remove('rotate');
+          header.nextElementSibling.classList.add('collapse');
         });
-      });
-
-    }
+  
+        if (isCollapsed) {
+          currentContentEle.classList.remove("collapse");
+          ach.querySelector('.dropDown').classList.add('rotate');
+        }
+      }, false);
+    });
   }
   
   

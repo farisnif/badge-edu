@@ -34,10 +34,10 @@
   <script>
     const accrodHeaders = document.querySelectorAll(".accord-header");
 accrodHeaders.forEach((ach) => {
-  ach.addEventListener("click", toggelItem, false);
+  ach.addEventListener("click", toggleItem, false);
 });
 
-function toggelItem() {
+function toggleItem() {
   const currentContentEle = this.nextElementSibling;
 
   const isCollapsed = currentContentEle.classList.contains("collapse");
