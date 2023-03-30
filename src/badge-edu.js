@@ -96,8 +96,8 @@ export class BadgeEdu extends LitElement {
   }
 
   firstUpdated() {
-    const accrodHeaders = this.shadowRoot.querySelectorAll(".accord-header");
-    accrodHeaders.forEach((ach) => {
+    const accordHeaders = this.shadowRoot.querySelectorAll(".accord-header");
+    accordHeaders.forEach((ach) => {
       ach.addEventListener("click", toggelItem, false);
     });
 
@@ -106,7 +106,7 @@ export class BadgeEdu extends LitElement {
 
       const isCollapsed = currentContentEle.classList.contains("collapse");
 
-      accrodHeaders.forEach((ach) => {
+      accordHeaders.forEach((ach) => {
         const contentEle = ach.nextElementSibling;
         if (!contentEle.classList.contains("collapse")) {
           contentEle.classList.add("collapse");
