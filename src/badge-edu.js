@@ -87,6 +87,12 @@ export class BadgeEdu extends LitElement {
       padding-left: 100px;
       right: 5px;
     }
+
+    .rotate {
+      transform: scaleY(-1);
+      transition: transform 0.2s ease-in-out;
+    }
+
       `;
   }
 
@@ -116,6 +122,20 @@ export class BadgeEdu extends LitElement {
       if (isCollapsed) {
         currentContentEle.classList.remove("collapse");
       }
+
+      accordHeaders.forEach(header => {
+        header.addEventListener('click', () => {
+          const dropdownImage = header.querySelector('.dropDown');
+      
+          // toggle the 'rotate' class on the dropdown image
+          dropdownImage.classList.toggle('rotate');
+          
+          // toggle the 'active' class on the accord content
+          const accordContent = header.nextElementSibling;
+          accordContent.classList.toggle('active');
+        });
+      });
+
     }
   }
   
