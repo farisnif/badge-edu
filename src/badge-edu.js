@@ -16,6 +16,7 @@ export class BadgeEdu extends LitElement {
     .accordion-container {
       display: flex;
       justify-content: flex-end;
+      align-items: center;
     }
 
     .accord-header {
@@ -105,6 +106,35 @@ export class BadgeEdu extends LitElement {
     .link{
       margin-top: 20px;
     }
+    .dottedlines{
+      margin-top: 80px;
+
+    }
+    .pfp {
+  border-radius: 50%;
+  margin: 0 100px;
+  margin-top: -25px
+}
+
+.creator {
+  display: flex;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.creatorName {
+  margin-left: 142px;
+  margin-top: -32px;
+}
+.approxTime{
+  margin-top: 17px;
+
+}
+.stepsBadge{
+  font-size: 24px;
+  margin-top: 28px;
+
+}
       `;
   }
 
@@ -155,7 +185,12 @@ export class BadgeEdu extends LitElement {
       
               <div class="link"> <a href="link"> https://docs.aws.amazon.com/cognito/latest/developerguide/tutorials.html </a>
               </div>
-              <div class="link"> <a href="link"> https://docs.aws.amazon.com/cognito/latest/developerguide/tutorials.html </a>
+              <div class="dottedlines">---------------------------------------------------------</div>
+              <div class="creator"> Badge Creator:</div>
+              <img class="pfp" src="https://badgesapp.psu.edu/uploads/user/image/23804/small_image_Joshua_pittsburgh2021.png" />
+              <div class="creatorName"> Joshua Hantman</div>
+              <div class="approxTime"> Approximate time to complete: 4.0 hours</div>
+              <div class="stepsBadge"> Steps to Earn This Badge</div>
               </div>
             </div>
       
