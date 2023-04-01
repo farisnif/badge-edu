@@ -158,15 +158,7 @@ export class BadgeEdu extends LitElement {
       `;
   }
 
-  constructor() {
-    super();
-    this.version = 'STARTING';
-    this.badgeName = 'Amazon Cognito';
-    this.badgeIcon = new URL(
-      "https://www.drupal.org/files/styles/grid-3-2x/public/project-images/553dbabbd287c26ca83aef42.jpg?itok=ruAqqobg"
-    ).href;
-    this.badgeDescription = 'Learn the basics of how Amazon Cognito works, and how you can use it to create User Sign In, Sign In, Access Control, User Pools, and Identity Pools';
-  }
+
 
   firstUpdated() {
     const ach = this.shadowRoot.querySelector(".accord-header");
@@ -188,7 +180,20 @@ export class BadgeEdu extends LitElement {
     }, false);
   }
 
-
+  constructor() {
+    super();
+    this.version = 'STARTING';
+    this.badgeName = 'Amazon Cognito';
+    this.badgeIcon = new URL(
+      "https://www.drupal.org/files/styles/grid-3-2x/public/project-images/553dbabbd287c26ca83aef42.jpg?itok=ruAqqobg"
+    ).href;
+    this.badgeDescription = 'Learn the basics of how Amazon Cognito works, and how you can use it to create User Sign In, Sign In, Access Control, User Pools, and Identity Pools';
+    this.link = 'https://docs.aws.amazon.com/cognito/latest/developerguide/tutorials.html';
+    this.creatorName = 'Joshua Hantman';
+    this.badgeCompletionTime = '4.0 hours';
+    this.stepOne = 'Creating your first Lamda Function';
+    this.stepTwo = 'Putting in your Hello Lamda Node.js code';
+  }
 
   render() {
     return html`
@@ -203,22 +208,18 @@ export class BadgeEdu extends LitElement {
           <div class="accord-content collapse">
             <div class="accord-body">${this.badgeDescription}
       
-              <div class="link"> <a href="link"> https://docs.aws.amazon.com/cognito/latest/developerguide/tutorials.html </a>
+              <div class="link"> <a href="link"> Amazon Cognito Info Link </a>
               </div>
               <div class="dottedlines">---------------------------------------------------------</div>
               <div class="creator"> Badge Creator:</div>
               <img class="pfp"
                 src="https://badgesapp.psu.edu/uploads/user/image/23804/small_image_Joshua_pittsburgh2021.png" />
-              <div class="creatorName"> Joshua Hantman</div>
-              <div class="approxTime"> Approximate time to complete: 4.0 hours</div>
-              <div class="stepsBadge"> Steps to Earn This Badge</div>
+              <div class="creatorName">${this.creatorName}</div>
+              <div class="approxTime">Approximate time to complete: ${this.badgeCompletionTime}</div>
+              <div class="stepsBadge">Steps to Earn This Badge</div>
       
-              <div class="firstStep">Creating your first Lamda Function</div>
-              <div class="secondStep">Putting in your Hello Lamda Node.js code</div>
-      
-      
-      
-      
+              <div class="firstStep">${this.stepOne}</div>
+              <div class="secondStep">${this.stepTwo}</div>
             </div>
           </div>
       
