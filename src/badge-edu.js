@@ -107,7 +107,7 @@ export class BadgeEdu extends LitElement {
       margin-top: 20px;
     }
     .dottedlines{
-      margin-top: 80px;
+      margin-top: 60px;
 
     }
     .pfp {
@@ -119,22 +119,42 @@ export class BadgeEdu extends LitElement {
 .creator {
   display: flex;
   align-items: center;
-  margin-top: 20px;
+  margin-top: 15px;
 }
 
 .creatorName {
   margin-left: 142px;
   margin-top: -32px;
 }
+
 .approxTime{
   margin-top: 17px;
-
 }
 .stepsBadge{
   font-size: 24px;
   margin-top: 28px;
-
+  color: #626161;
 }
+
+.firstStep{
+  margin-top: 8px;
+  font-size: 12px;
+  padding: 20px;
+  background-color: #dad7d7c9;
+  border-top: 1px solid #aeaeae;
+  border-bottom: 1px solid #aeaeae;
+} 
+
+.secondStep{
+  font-size: 12px;
+  padding: 20px;
+  background-color: #dad7d7c9;
+  border-top: 1px solid #aeaeae;
+  border-bottom: 1px solid #aeaeae;
+}
+
+
+
       `;
   }
 
@@ -187,15 +207,23 @@ export class BadgeEdu extends LitElement {
               </div>
               <div class="dottedlines">---------------------------------------------------------</div>
               <div class="creator"> Badge Creator:</div>
-              <img class="pfp" src="https://badgesapp.psu.edu/uploads/user/image/23804/small_image_Joshua_pittsburgh2021.png" />
+              <img class="pfp"
+                src="https://badgesapp.psu.edu/uploads/user/image/23804/small_image_Joshua_pittsburgh2021.png" />
               <div class="creatorName"> Joshua Hantman</div>
               <div class="approxTime"> Approximate time to complete: 4.0 hours</div>
               <div class="stepsBadge"> Steps to Earn This Badge</div>
-              </div>
-            </div>
       
+              <div class="firstStep">Creating your first Lamda Function</div>
+              <div class="secondStep">Putting in your Hello Lamda Node.js code</div>
+      
+      
+      
+      
+            </div>
           </div>
+      
         </div>
+      </div>
       </div>
     `;
   }
