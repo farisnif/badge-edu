@@ -20,19 +20,22 @@
 </head>
 
 <body>
+
+  <badge-roster></badge-roster>
   <form>
     <input type="text" id="search-input">
     <button type="submit">Search</button>
   </form>
 
   <badge-edu></badge-edu>
-  <!-- <badge-list></badge-list> -->
 
+  <script type="module">
+    import "./src/badge-edu.js";
+    import "./src/badge-roster.js";
+  </script>
+  
 
-
-  <script type="module" src="./src/badge-edu.js"></script>
   <script>
-
 //search bar JS
 const form = document.querySelector('form');
   const input = document.querySelector('#search-input');

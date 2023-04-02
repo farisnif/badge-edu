@@ -48,6 +48,10 @@ export class BadgeEdu extends LitElement {
       type: String,
       reflect: true
     },
+    hyperLinkText: {
+      type: String,
+      reflect: true
+    }
   };
 
   static get styles() {
@@ -255,6 +259,7 @@ export class BadgeEdu extends LitElement {
     this.stepTwo = 'Putting in your Hello Lamda Node.js code';
     this.hoursCompletionStepOne = '2.0 hours';
     this.hoursCompletionStepTwo = '2.0 hours';
+    this.hyperLinkText = 'Amazon Cognito Info Link';
   }
 
   render() {
@@ -270,7 +275,7 @@ export class BadgeEdu extends LitElement {
           <div class="accord-content collapse">
             <div class="accord-body">${this.badgeDescription}
       
-              <div class="link"> <a href="link"> Amazon Cognito Info Link </a>
+              <div class="link"> <a href="link"> ${this.hyperLinkText} </a>
               </div>
               <div class="dottedlines">---------------------------------------------------------</div>
               <div class="creator"> Badge Creator:</div>
