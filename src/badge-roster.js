@@ -48,6 +48,11 @@ export class BadgeRoster extends LitElement {
 
     render() {
         return html`
+        <form>
+    <input type="text" id="search-input">
+    <button type="submit">Search</button>
+  </form>
+            <h2>${this.wiki}</h2>
             ${this.badges.map(badge => html`
             <div class="item">
                 <badge-edu badgeName="${badge.badgeName}" badgeIcon="${badge.badgeIcon}" badgeDescription="${badge.badgeDescription}" link="${badge.link}" creatorName="${badge.creatorName}" badgeCompletionTime="${badge.badgeCompletionTime}" stepOne="${badge.stepOne}" stepTwo="${badge.stepTwo}" hoursCompletionStepOne="${badge.hoursCompletionStepOne}" hoursCompletionStepTwo="${badge.hoursCompletionStepTwo}" hyperLinkText="${badge.hyperLinkText}"></badge-edu>
