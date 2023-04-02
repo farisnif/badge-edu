@@ -128,6 +128,7 @@ export class BadgeEdu extends LitElement {
       /* float: left; */
       margin-right: 10px;
       padding-left: 10px;
+      max-width: 40px;
     }
     
     .accord-title {

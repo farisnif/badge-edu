@@ -41,7 +41,7 @@ export class BadgeRoster extends LitElement {
             display: flex;
         }
         .item {
-            
+            display: inline;
         }
         `;
     }
