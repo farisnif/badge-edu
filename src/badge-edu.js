@@ -1,4 +1,6 @@
 import { LitElement, html, css } from 'lit';
+import "@lrnwebcomponents/simple-icon/simple-icon.js";
+import "@lrnwebcomponents/simple-icon/lib/simple-icons.js";
 
 export class BadgeEdu extends LitElement {
   static properties = {
@@ -143,6 +145,8 @@ export class BadgeEdu extends LitElement {
   background-color: #dad7d7c9;
   border-top: 1px solid #aeaeae;
   border-bottom: 1px solid #aeaeae;
+  display: flex;
+  align-items: center;
 } 
 
 .secondStep{
@@ -151,6 +155,19 @@ export class BadgeEdu extends LitElement {
   background-color: #dad7d7c9;
   border-top: 1px solid #aeaeae;
   border-bottom: 1px solid #aeaeae;
+  display: flex;
+  align-items: center;
+}
+
+/* this below needs to be made so that it is not hard coded, if it is possible */
+
+.hoursCompletionStepTwo{
+  position: aboslute;
+  padding-left: 70%;
+}
+.hoursCompletionStepOne{
+  position: aboslute;
+  padding-left: 73%;
 }
 
 
@@ -193,6 +210,8 @@ export class BadgeEdu extends LitElement {
     this.badgeCompletionTime = '4.0 hours';
     this.stepOne = 'Creating your first Lamda Function';
     this.stepTwo = 'Putting in your Hello Lamda Node.js code';
+    this.hoursCompletionStepOne = '2.0 hours';
+    this.hoursCompletionStepTwo = '2.0 hours';
   }
 
   render() {
@@ -217,9 +236,16 @@ export class BadgeEdu extends LitElement {
               <div class="creatorName">${this.creatorName}</div>
               <div class="approxTime">Approximate time to complete: ${this.badgeCompletionTime}</div>
               <div class="stepsBadge">Steps to Earn This Badge</div>
-      
-              <div class="firstStep">${this.stepOne}</div>
-              <div class="secondStep">${this.stepTwo}</div>
+              
+              <div class="firstStep">
+              <simple-icon-lite icon="av:play-circle-filled">
+</simple-icon-lite> ${this.stepOne}
+<div class="hoursCompletionStepOne">${this.hoursCompletionStepOne}</div>
+</div>
+              <div class="secondStep">
+                <simple-icon-lite icon="av:play-circle-filled">
+</simple-icon-lite> ${this.stepTwo}
+<div class="hoursCompletionStepTwo">${this.hoursCompletionStepOne}</div>
             </div>
           </div>
       
