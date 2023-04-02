@@ -4,7 +4,50 @@ import "@lrnwebcomponents/simple-icon/lib/simple-icons.js";
 
 export class BadgeEdu extends LitElement {
   static properties = {
-    version: {},
+    version: {
+      type: String,
+      reflect: true
+    },
+    badgeName: {
+      type: String,
+      reflect: true
+    },
+    badgeIcon: {
+      type: String,
+      reflect: true
+    },
+    badgeDescription: {
+      type: String,
+      reflect: true
+    },
+    link: {
+      type: String,
+      reflect: true
+    },
+    creatorName: {
+      type: String,
+      reflect: true
+    },
+    badgeCompletionTime: {
+      type: String,
+      reflect: true
+    },
+    stepOne: {
+      type: String,
+      reflect: true
+    },
+    stepTwo: {
+      type: String,
+      reflect: true
+    },
+    hoursCompletionStepOne: {
+      type: String,
+      reflect: true
+    },
+    hoursCompletionStepTwo: {
+      type: String,
+      reflect: true
+    },
   };
 
   static get styles() {
