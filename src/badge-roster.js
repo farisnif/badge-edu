@@ -48,10 +48,11 @@ export class BadgeRoster extends LitElement {
 
     render() {
         return html`
-        <form>
-    <input type="text" id="search-input">
-    <button type="submit">Search</button>
-  </form>
+        <form style="display: flex; justify-content: center; margin-top: 20px;">
+        <input type="text" id="search-input" style="padding: 10px; width: 300px; border-radius: 4px; border: none; box-shadow: 0 2px 4px rgba(0,0,0,0.2);">
+        <button type="submit" style="padding: 10px 20px; margin-left: 10px; background-color: #007bff; color: #fff; border-radius: 4px; border: none; cursor: pointer;">Search</button>
+      </form>
+      
             <h2>${this.wiki}</h2>
             ${this.badges.map(badge => html`
             <div class="item">
