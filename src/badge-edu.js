@@ -161,62 +161,62 @@ export class BadgeEdu extends LitElement {
 
     }
     .pfp {
-  border-radius: 50%;
-  margin: 0 100px;
-  margin-top: -25px
-}
+      border-radius: 50%;
+      margin: 0 100px;
+      margin-top: -25px
+    }
 
-.creator {
-  display: flex;
-  align-items: center;
-  margin-top: 15px;
-}
+    .creator {
+      display: flex;
+      align-items: center;
+      margin-top: 15px;
+    }
 
-.creatorName {
-  margin-left: 142px;
-  margin-top: -32px;
-}
+    .creatorName {
+      margin-left: 142px;
+      margin-top: -32px;
+    }
 
-.approxTime{
-  margin-top: 17px;
-}
-.stepsBadge{
-  font-size: 24px;
-  margin-top: 28px;
-  color: #626161;
-}
+    .approxTime{
+      margin-top: 17px;
+    }
+    .stepsBadge{
+      font-size: 24px;
+      margin-top: 28px;
+      color: #626161;
+    }
 
-.firstStep{
-  margin-top: 8px;
-  font-size: 12px;
-  padding: 20px;
-  background-color: #dad7d7c9;
-  border-top: 1px solid #aeaeae;
-  border-bottom: 1px solid #aeaeae;
-  display: flex;
-  align-items: center;
-} 
+    .firstStep{
+      margin-top: 8px;
+      font-size: 12px;
+      padding: 20px;
+      background-color: #dad7d7c9;
+      border-top: 1px solid #aeaeae;
+      border-bottom: 1px solid #aeaeae;
+      display: flex;
+      align-items: center;
+    } 
 
-.secondStep{
-  font-size: 12px;
-  padding: 20px;
-  background-color: #dad7d7c9;
-  border-top: 1px solid #aeaeae;
-  border-bottom: 1px solid #aeaeae;
-  display: flex;
-  align-items: center;
-}
+    .secondStep{
+      font-size: 12px;
+      padding: 20px;
+      background-color: #dad7d7c9;
+      border-top: 1px solid #aeaeae;
+      border-bottom: 1px solid #aeaeae;
+      display: flex;
+      align-items: center;
+    }
 
-/* this below needs to be made so that it is not hard coded, if it is possible */
+    /* this below needs to be made so that it is not hard coded, if it is possible */
 
-.hoursCompletionStepTwo{
-  position: aboslute;
-  padding-left: 70%;
-}
-.hoursCompletionStepOne{
-  position: aboslute;
-  padding-left: 73%;
-}
+    .hoursCompletionStepTwo{
+      position: aboslute;
+      padding-left: 70%;
+    }
+    .hoursCompletionStepOne{
+      position: aboslute;
+      padding-left: 73%;
+    }
 
 
 
@@ -263,6 +263,7 @@ export class BadgeEdu extends LitElement {
     this.hoursCompletionStepOne = '2.0 hours';
     this.hoursCompletionStepTwo = '2.0 hours';
     this.hyperLinkText = 'Amazon Cognito Info Link';
+    this.pfpImg = 'https://badgesapp.psu.edu/uploads/user/image/23804/small_image_Joshua_pittsburgh2021.png';
   }
 
   render() {
@@ -283,7 +284,7 @@ export class BadgeEdu extends LitElement {
               <div class="dottedlines">---------------------------------------------------------</div>
               <div class="creator"> Badge Creator:</div>
               <img class="pfp"
-                src="https://badgesapp.psu.edu/uploads/user/image/23804/small_image_Joshua_pittsburgh2021.png" />
+                src="${this.pfpImg}" />
               <div class="creatorName">${this.creatorName}</div>
               <div class="approxTime">Approximate time to complete: ${this.badgeCompletionTime}</div>
               <div class="stepsBadge">Steps to Earn This Badge</div>
