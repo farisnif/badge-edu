@@ -1,5 +1,5 @@
 export default async function handler(request, res) {
-
+    console.log("TEST");
     const roster = [
         {
             "badgeName": "Amazon Cognito",
