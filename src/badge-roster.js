@@ -22,7 +22,7 @@ export class BadgeRoster extends LitElement {
     }
 
     updateRoster() {
-        const address = new URL('../assets/roster.json', import.meta.url).href;
+        const address = '../api/roster';
         fetch(address).then((response) => {
             if (response.ok) {
                 return response.json()
