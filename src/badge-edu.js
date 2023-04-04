@@ -164,6 +164,9 @@ export class BadgeEdu extends LitElement {
       border-radius: 50%;
       margin: 0 100px;
       margin-top: -25px
+      max-height: 30px;
+      max-width: 30px;
+
     }
 
     .creator {
@@ -263,7 +266,7 @@ export class BadgeEdu extends LitElement {
     this.hoursCompletionStepOne = '2.0 hours';
     this.hoursCompletionStepTwo = '2.0 hours';
     this.hyperLinkText = 'Amazon Cognito Info Link';
-    this.pfpImg = 'https://badgesapp.psu.edu/uploads/user/image/23804/small_image_Joshua_pittsburgh2021.png';
+    this.pfpImg = 'https://pbs.twimg.com/profile_images/1605284457602338822/xISpy4TU_400x400.jpg';
   }
 
   render() {
