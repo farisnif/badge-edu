@@ -18,6 +18,7 @@ export class BadgeRoster extends LitElement {
         this.updateRoster();
         this.welcomeText = 'Here you will learn how to set up an account for AWS, how to create a root user, a I AM user account, setup MFA on your Root and I AM accounts, set up a user pool in Amazon Cognito, how to upload and use Amazon S3, and how to use Amazon Lambda';
         this.pageTitle = 'Explore';
+        this.searchPlaceHolder = 'Search Content, Topics, and People';
     }
 
     updateRoster() {
@@ -67,7 +68,7 @@ export class BadgeRoster extends LitElement {
         <div class="pageTitle">${this.pageTitle}</div>
       <div class="welcomeStage">${this.welcomeText}
       <fetch style="display: flex; justify-content: center; margin-top: 20px;">
-        <input type="text" placeholder="Search Content, Topics, and People" id="search-input" style="padding: 10px; width: 90%; border-radius: 4px; border: none; box-shadow: 0 2px 4px rgba(0,0,0,0.2);">
+        <input type="text" placeholder=${this.searchPlaceHolder} id="search-input" style="padding: 10px; width: 90%; border-radius: 4px; border: none; box-shadow: 0 2px 4px rgba(0,0,0,0.2);">
         <button type="submit" style="padding: 10px 20px; margin-left: 10px; background-color: #007bff; color: #fff; border-radius: 4px; border: none; cursor: pointer;">Search</button>
     </fetch>
     </div>
