@@ -245,6 +245,8 @@ export class BadgeEdu extends LitElement {
     }, false);
   }
 
+
+
   constructor() {
     super();
     this.version = 'STARTING';
