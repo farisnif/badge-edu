@@ -45,15 +45,19 @@ export class BadgeRoster extends LitElement {
         .item {
             display: inline;
         }
-        .welcomeText {
+        .welcomeStage {
             background-color: white;
             padding: 20px;
             font-size: 20px;
+            /* max-width: 90%; */
+            margin: 0 auto;
             /* need to add font */
         }
         .pageTitle {
             padding: 20px;
             font-size: 32px;
+            /* max-width: 100%; */
+            margin: 0 auto;
         }
         `;
     }
@@ -61,9 +65,9 @@ export class BadgeRoster extends LitElement {
     render() {
         return html`
         <div class="pageTitle">${this.pageTitle}</div>
-      <div class="welcomeText">${this.welcomeText}
+      <div class="welcomeStage">${this.welcomeText}
       <form style="display: flex; justify-content: center; margin-top: 20px;">
-        <input type="text" placeholder="Search Content, Topics, and People" id="search-input" style="padding: 10px; width: 300px; border-radius: 4px; border: none; box-shadow: 0 2px 4px rgba(0,0,0,0.2);">
+        <input type="text" placeholder="Search Content, Topics, and People" id="search-input" style="padding: 10px; width: 90%; border-radius: 4px; border: none; box-shadow: 0 2px 4px rgba(0,0,0,0.2);">
         <button type="submit" style="padding: 10px 20px; margin-left: 10px; background-color: #007bff; color: #fff; border-radius: 4px; border: none; cursor: pointer;">Search</button>
       </form>
     </div>
