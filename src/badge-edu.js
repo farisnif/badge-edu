@@ -60,12 +60,7 @@ export class BadgeEdu extends LitElement {
 
   static get styles() {
     return css`
-          /* * {
-      padding: 2px;
-      margin: 0 auto;
-      box-sizing: border-box;
-      border-radius: 4px;
-    } */
+    
     .accordion-container {
       display: flex;
       justify-content: flex-end;
@@ -88,8 +83,6 @@ export class BadgeEdu extends LitElement {
     }
 
     .accord-content {
-      /* height: 120px; */
-      /* overflow: hidden; */
       transition: var(--badge-edu-open-close-speed, all 0.35s ease-out);
       transform: scaleY(1);
       transform-origin: top;
@@ -98,11 +91,6 @@ export class BadgeEdu extends LitElement {
     .accord-body {
       padding: 22px;
       border-left: var(--badge-edu-padding-left-color, 15px solid #3e98d3);
-      /* border-radius: 6px; */
-      /* border-top-left-radius: 0px;
-      border-top-right-radius: 0px;
-      border-bottom-left-radius: 6px;
-      border-bottom-right-radius: 6px; */
       color: var(--badge-edu-inside-contents-text-color, #333333);
       font-family: var(--badge-edu-font-style, "effra", sans-serif);
       font-size: var(--badge-edu-inside-contents-font-size, 14px);
