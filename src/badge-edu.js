@@ -76,36 +76,36 @@ export class BadgeEdu extends LitElement {
       position: relative;
       display: flex;
       align-items: center;
-      background: #cfe6f4;
-      padding-left: 2px;
-      border-radius: 6px;
-      color: black;
-      height: 50px;
-      border-left: 15px solid #3e98d3;
-      border-right: 1px solid #2077c4ca;
-      border-top: 1px solid #2077c4ca;
+      background: var(--badge-edu-wrapper-background-color, #cfe6f4);
+      padding-left: var(--badge-edu-header-padding-left, 2px);
+      border-radius: var(--badge-edu-wrapper-border-radius, 6px);
+      color: var(--badge-edu-header-text-color, black);
+      height: var(--badge-edu-header-height, 50px);
+      border-left: var(--badge-edu-header-left-border, 15px solid #3e98d3);
+      border-right: var(--badge-edu-header-right-border, 1px solid #2077c4ca);
+      border-top: var(--badge-edu-header-top-border, 1px solid #2077c4ca);
       cursor: pointer;
     }
 
     .accord-content {
       /* height: 120px; */
       /* overflow: hidden; */
-      transition: all 0.20s ease-out;
+      transition: var(--badge-edu-open-close-speed, all 0.35s ease-out);
       transform: scaleY(1);
       transform-origin: top;
     }
 
     .accord-body {
       padding: 22px;
-      border-left: 15px solid #3e98d3;
+      border-left: var(--badge-edu-padding-left-color, 15px solid #3e98d3);
       /* border-radius: 6px; */
       /* border-top-left-radius: 0px;
       border-top-right-radius: 0px;
       border-bottom-left-radius: 6px;
       border-bottom-right-radius: 6px; */
-      color: #333333;
-      font-family: "effra", sans-serif;
-      font-size: 14px;
+      color: var(--badge-edu-inside-contents-text-color, #333333);
+      font-family: var(--badge-edu-font-style, "effra", sans-serif);
+      font-size: var(--badge-edu-inside-contents-font-size, 14px);
       direction: ltr;
       border-bottom: 1px solid #2077c4ca;
       border-right: 1px solid #2077c4ca;
@@ -114,7 +114,7 @@ export class BadgeEdu extends LitElement {
     .accord-item {
       margin: 0 auto;
       padding: 5px;
-      width: 95%;
+      width: var(--badge-edu-width-header-and-contents, 95%);
       /* border-radius: 6px; */
     }
 
@@ -128,11 +128,11 @@ export class BadgeEdu extends LitElement {
     }
 
     .image {
-      height: 40px;
+      height: var(--badge-edu-badge-header-pic-height, 40px);
       /* float: left; */
       margin-right: 10px;
       padding-left: 10px;
-      max-width: 40px;
+      max-width: var(--badge-edu-badge-header-pic-height, 40px);
     }
     
     .accord-title {
@@ -150,27 +150,23 @@ export class BadgeEdu extends LitElement {
 
     .rotate {
       transform: scaleY(-1);
-      transition: transform 0.2s ease-in-out;
-    }
-
-    .badgeCountHeader{
-       font-size: 20px;
+      transition: var(--badge-edu-speed-dropdown-rotation, transform 0.2s ease-in-out);
     }
 
     .link{
       margin-top: 20px;
     }
+
     .dottedlines{
       margin-top: 60px;
-
     }
-    .pfp {
-      border-radius: 50%;
-      margin: 0 100px;
-      max-height: 30px;
-      max-width: 30px;
-      margin-top: -25px;
 
+    .pfp {
+      border-radius: var(--badge-edu-profile-pic-radius, 50%);
+      margin: 0 100px;
+      max-height: var(--badge-edu-profile-pic-height, 30px);
+      max-width: var(--badge-edu-profile-pic-width, 30px);
+      margin-top: -25px;
     }
 
     .creator {
@@ -187,6 +183,7 @@ export class BadgeEdu extends LitElement {
     .approxTime{
       margin-top: 17px;
     }
+
     .stepsBadge{
       font-size: 24px;
       margin-top: 28px;
@@ -195,21 +192,21 @@ export class BadgeEdu extends LitElement {
 
     .firstStep{
       margin-top: 8px;
-      font-size: 12px;
+      font-size: var(--badge-edu-step-one-font-size, 12px);
       padding: 20px;
-      background-color: #dad7d7c9;
+      background-color: var(--badge-edu-step-one-background-color, #dad7d7c9);
       border-top: 1px solid #aeaeae;
-      border-bottom: 1px solid #aeaeae;
+      border-bottom: var(--badge-edu-step-one-bottom-border-color, 1px solid #aeaeae);
       display: flex;
       align-items: center;
     } 
 
     .secondStep{
-      font-size: 12px;
+      font-size: var(--badge-edu-step-two-font-size, 12px);
       padding: 20px;
-      background-color: #dad7d7c9;
+      background-color: var(--badge-edu-step-two-background-color, #dad7d7c9);
       border-top: 1px solid #aeaeae;
-      border-bottom: 1px solid #aeaeae;
+      border-bottom: var(--badge-edu-step-two-bottom-border-color, 1px solid #aeaeae);
       display: flex;
       align-items: center;
     }
@@ -217,18 +214,13 @@ export class BadgeEdu extends LitElement {
     /* this below needs to be made so that it is not hard coded, if it is possible */
 
     .hoursCompletionStepTwo{
-      margin-left: 80%;      
+      margin-left: var(--badge-edu-step-two-hours-completion-location-from-left, 80%);      
     }
     .hoursCompletionStepOne{
-      margin-left: 82%;
+      margin-left: var(--badge-edu-step-one-hours-completion-location-from-left, 80%);
     }
-
-
-
       `;
   }
-
-
 
   firstUpdated() {
     const ach = this.shadowRoot.querySelector(".accord-header");
@@ -249,8 +241,6 @@ export class BadgeEdu extends LitElement {
 
     }, false);
   }
-
-
 
   constructor() {
     super();
@@ -295,19 +285,19 @@ export class BadgeEdu extends LitElement {
               <div class="stepsBadge">Steps to Earn This Badge</div>
               
               <div class="firstStep">
-              <simple-icon-lite icon="av:play-circle-filled">
-</simple-icon-lite> ${this.stepOne}
-<div class="hoursCompletionStepOne">${this.hoursCompletionStepOne}</div>
-</div>
-              <div class="secondStep">
                 <simple-icon-lite icon="av:play-circle-filled">
-</simple-icon-lite> ${this.stepTwo}
-<div class="hoursCompletionStepTwo">${this.hoursCompletionStepOne}</div>
+                    </simple-icon-lite> ${this.stepOne}
+                  <div class="hoursCompletionStepOne">${this.hoursCompletionStepOne}</div>
+              </div>
+                <div class="secondStep">
+                  <simple-icon-lite icon="av:play-circle-filled">
+                    </simple-icon-lite> ${this.stepTwo}
+          <div class="hoursCompletionStepTwo">${this.hoursCompletionStepOne}</div>
             </div>
           </div>
         </div>
       </div>
-      </div>
+    </div>
     `;
   }
 }
