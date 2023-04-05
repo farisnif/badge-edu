@@ -163,9 +163,9 @@ export class BadgeEdu extends LitElement {
     .pfp {
       border-radius: 50%;
       margin: 0 100px;
-      margin-top: -25px
       max-height: 30px;
       max-width: 30px;
+      margin-top: -25px;
 
     }
 
@@ -213,12 +213,10 @@ export class BadgeEdu extends LitElement {
     /* this below needs to be made so that it is not hard coded, if it is possible */
 
     .hoursCompletionStepTwo{
-      position: aboslute;
-      padding-left: 70%;
+      margin-left: 70%;      
     }
     .hoursCompletionStepOne{
-      position: aboslute;
-      padding-left: 73%;
+      margin-left: 73%;
     }
 
 

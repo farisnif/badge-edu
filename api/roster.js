@@ -10,7 +10,7 @@ export default async function handler(request, res) {
             "creatorName": "Joshua Hantman",
             "badgeCompletionTime": "4.0 hours",
             "stepOne": "Creating your first Lambda Function",
-            "StepTwo": "Putting in your Hello Lamda Node.js code",
+            "stepTwo": "Putting in your Hello Lamda Node.js code",
             "hoursCompletionStepOne": "2.0 hours",
             "hoursCompletionStepTwo": "2.0 hours"
         },
@@ -23,7 +23,7 @@ export default async function handler(request, res) {
             "creatorName": "Joshua Hantman",
             "badgeCompletionTime": "4.0 hours",
             "stepOne": "Creating your first Lambda Function",
-            "StepTwo": "Putting in your Hello Lamda Node.js code",
+            "stepTwo": "Putting in your Hello Lamda Node.js code",
             "hoursCompletionStepOne": "2.0 hours",
             "hoursCompletionStepTwo": "2.0 hours"
         },
@@ -36,7 +36,7 @@ export default async function handler(request, res) {
             "creatorName": "Joshua Hantman",
             "badgeCompletionTime": "4.0 hours",
             "stepOne": "Creating your first Lambda Function",
-            "StepTwo": "Putting in your Hello Lamda Node.js code",
+            "stepTwo": "Putting in your Hello Lamda Node.js code",
             "hoursCompletionStepOne": "2.0 hours",
             "hoursCompletionStepTwo": "2.0 hours"
         },
@@ -49,7 +49,7 @@ export default async function handler(request, res) {
             "creatorName": "Joshua Hantman",
             "badgeCompletionTime": "4.0 hours",
             "stepOne": "Creating your first Lambda Function",
-            "StepTwo": "Putting in your Hello Lamda Node.js code",
+            "stepTwo": "Putting in your Hello Lamda Node.js code",
             "hoursCompletionStepOne": "2.0 hours",
             "hoursCompletionStepTwo": "2.0 hours"
         },
@@ -62,7 +62,7 @@ export default async function handler(request, res) {
             "creatorName": "Joshua Hantman",
             "badgeCompletionTime": "4.0 hours",
             "stepOne": "Creating your first Lambda Function",
-            "StepTwo": "Putting in your Hello Lamda Node.js code",
+            "stepTwo": "Putting in your Hello Lamda Node.js code",
             "hoursCompletionStepOne": "2.0 hours",
             "hoursCompletionStepTwo": "2.0 hours"
         }
