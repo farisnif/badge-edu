@@ -1,5 +1,4 @@
 export default async function handler(request, res) {
-    console.log("TEST");
     const roster = [
         {
             "badgeName": "Amazon Cognito",
@@ -12,7 +11,8 @@ export default async function handler(request, res) {
             "stepOne": "Creating your first Lambda Function",
             "stepTwo": "Putting in your Hello Lamda Node.js code",
             "hoursCompletionStepOne": "2.0 hours",
-            "hoursCompletionStepTwo": "2.0 hours"
+            "hoursCompletionStepTwo": "2.0 hours",
+            "pfpImg": "https://drupal.psu.edu/sites/default/files/styles/square-profile-portrait/public/headshot_0.jpg?itok=XWuUSEEP"
         },
         {
             "badgeName": "Amazon IAM",
@@ -25,7 +25,8 @@ export default async function handler(request, res) {
             "stepOne": "Creating your first Lambda Function",
             "stepTwo": "Putting in your Hello Lamda Node.js code",
             "hoursCompletionStepOne": "2.0 hours",
-            "hoursCompletionStepTwo": "2.0 hours"
+            "hoursCompletionStepTwo": "2.0 hours",
+            "pfpImg": "https://drupal.psu.edu/sites/default/files/styles/square-profile-portrait/public/headshot_0.jpg?itok=XWuUSEEP"
         },
         {
             "badgeName": "Signing up for AWS Web Services",
@@ -38,7 +39,9 @@ export default async function handler(request, res) {
             "stepOne": "Creating your first Lambda Function",
             "stepTwo": "Putting in your Hello Lamda Node.js code",
             "hoursCompletionStepOne": "2.0 hours",
-            "hoursCompletionStepTwo": "2.0 hours"
+            "hoursCompletionStepTwo": "2.0 hours",
+            "pfpImg": "https://drupal.psu.edu/sites/default/files/styles/square-profile-portrait/public/headshot_0.jpg?itok=XWuUSEEP"
+
         },
         {
             "badgeName": "AWS-LAMBDA Phase 1",
@@ -51,7 +54,9 @@ export default async function handler(request, res) {
             "stepOne": "Creating your first Lambda Function",
             "stepTwo": "Putting in your Hello Lamda Node.js code",
             "hoursCompletionStepOne": "2.0 hours",
-            "hoursCompletionStepTwo": "2.0 hours"
+            "hoursCompletionStepTwo": "2.0 hours",
+            "pfpImg": "https://drupal.psu.edu/sites/default/files/styles/square-profile-portrait/public/headshot_0.jpg?itok=XWuUSEEP"
+
         },
         {
             "badgeName": "Amazon S3 Phase 1",
@@ -64,7 +69,9 @@ export default async function handler(request, res) {
             "stepOne": "Creating your first Lambda Function",
             "stepTwo": "Putting in your Hello Lamda Node.js code",
             "hoursCompletionStepOne": "2.0 hours",
-            "hoursCompletionStepTwo": "2.0 hours"
+            "hoursCompletionStepTwo": "2.0 hours",
+            "pfpImg": "https://drupal.psu.edu/sites/default/files/styles/square-profile-portrait/public/headshot_0.jpg?itok=XWuUSEEP"
+
         }
     ];
     res.setHeader('Cache-Control', 'max-age=0, s-maxage=1800');

@@ -51,6 +51,10 @@ export class BadgeEdu extends LitElement {
     hyperLinkText: {
       type: String,
       reflect: true
+    },
+    pfpImg: {
+      type: String,
+      reflect: true
     }
   };
 
@@ -285,7 +289,7 @@ export class BadgeEdu extends LitElement {
               <div class="dottedlines">---------------------------------------------------------</div>
               <div class="creator"> Badge Creator:</div>
               <img class="pfp"
-                src="${this.pfpImg}" />
+                src="${this.pfpImg}"/>
               <div class="creatorName">${this.creatorName}</div>
               <div class="approxTime">Approximate time to complete: ${this.badgeCompletionTime}</div>
               <div class="stepsBadge">Steps to Earn This Badge</div>
@@ -301,7 +305,6 @@ export class BadgeEdu extends LitElement {
 <div class="hoursCompletionStepTwo">${this.hoursCompletionStepOne}</div>
             </div>
           </div>
-      
         </div>
       </div>
       </div>
