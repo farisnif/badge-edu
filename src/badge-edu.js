@@ -217,10 +217,10 @@ export class BadgeEdu extends LitElement {
     /* this below needs to be made so that it is not hard coded, if it is possible */
 
     .hoursCompletionStepTwo{
-      margin-left: 70%;      
+      margin-left: 80%;      
     }
     .hoursCompletionStepOne{
-      margin-left: 73%;
+      margin-left: 82%;
     }
 
 
