@@ -1,6 +1,6 @@
 import { LitElement, html, css } from 'lit';
 import "./badge-edu.js";
-import "./search.js"
+import "./search-bar.js"
 
 export class BadgeRoster extends LitElement {
     static get tag() {
@@ -16,49 +16,50 @@ export class BadgeRoster extends LitElement {
         super();
         this.badges = [];
         this.wiki = 'Badges (5)';
-        this.updateRoster();
-        // this.welcomeText = 'Here you will learn how to set up an account for AWS, how to create a root user, a I AM user account, setup MFA on your Root and I AM accounts, set up a user pool in Amazon Cognito, how to upload and use Amazon S3, and how to use Amazon Lambda';
-        // this.pageTitle = 'Explore';
-        this.searchPlaceHolder = 'Search Content, Topics, and People';
+        this.getSearchResults().then((results) => {
+            this.badges = results;
+        });
+    }
+   
+
+    static get styles() {
+        return css`
+       
+        `;
     }
 
-    updateRoster() {
-        const address = '../api/roster';
-        fetch(address).then((response) => {
+    async getSearchResults(value = '') {
+        const address = `/api/roster?search=${value}`;
+        const results = await fetch(address).then((response) => {
             if (response.ok) {
                 return response.json()
             }
             return [];
         })
-            .then((data) => {
-                this.badges = data;
-            });
+        .then((data) => {
+            return data;
+        });
+
+        return results;
     }
 
-    static get styles() {
-        return css`
-        :host {
-            display: block;
-        }
-        .wrapper {
-            border: 2px solid black;
-            display: flex;
-        }
-        .item {
-            display: inline;
-        }
-        `;
+    async _handleSearchEvent(e) {
+        const term = e.detail.value;
+        this.players = await this.getSearchResults(term);
     }
+
 
     render() {
         return html`
-            <search-bar></search-bar>
             <h2>${this.wiki}</h2>
+            <search-bar> @value-changed="${this._handleSearchEvent}"</search-bar>
+            <div class="wrapper">
             ${this.badges.map(badge => html`
             <div class="item">
                 <badge-edu badgeName="${badge.badgeName}" badgeIcon="${badge.badgeIcon}" badgeDescription="${badge.badgeDescription}" link="${badge.link}" creatorName="${badge.creatorName}" badgeCompletionTime="${badge.badgeCompletionTime}" stepOne="${badge.stepOne}" stepTwo="${badge.stepTwo}" hoursCompletionStepOne="${badge.hoursCompletionStepOne}" hoursCompletionStepTwo="${badge.hoursCompletionStepTwo}" hyperLinkText="${badge.hyperLinkText}" pfpImage="${badge.pfpImg}"></badge-edu>
             </div>
             `)}
+            </div>
         
         `;
     }
