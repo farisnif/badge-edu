@@ -45,14 +45,14 @@ export class BadgeRoster extends LitElement {
 
     async _handleSearchEvent(e) {
         const term = e.detail.value;
-        this.players = await this.getSearchResults(term);
+        this.badges = await this.getSearchResults(term);
     }
 
 
     render() {
         return html`
             <h2>${this.wiki}</h2>
-            <search-bar> @value-changed="${this._handleSearchEvent}"</search-bar>
+            <search-bar @value-changed="${this._handleSearchEvent}"></search-bar>
             <div class="wrapper">
             ${this.badges.map(badge => html`
             <div class="item">

@@ -26,6 +26,14 @@ export default {
     }),
     /** Resolve bare module imports */
     nodeResolve(),
+    copy({
+      targets: [
+        {
+          src: 'node_modules/@lrnwebcomponents/simple-icon/lib/svgs',
+          dest: 'dist',
+        },
+      ],
+    }),
     /** Minify JS, compile JS to a lower language target */
     esbuild({
       minify: true,

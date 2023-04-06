@@ -1,6 +1,6 @@
 export default async function handler(req, res) {
     const search = req.query.search || '';
-    var roster = [
+    var badgeList = [
         {
             "badgeName": "Amazon Cognito",
             "badgeIcon": "https://www.drupal.org/files/styles/grid-3-2x/public/project-images/553dbabbd287c26ca83aef42.jpg?itok=ruAqqobg",
@@ -75,10 +75,10 @@ export default async function handler(req, res) {
 
         }
     ];
-    roster.map((badges) => {
-        badges.index = badges.badgeName.toLowerCase() + " " + badges.badgeDescription.toLowerCase() + " " + badges.creatorName.toLowerCase();
+    badgeList.map((badges) => {
+        badges.index = badges.badgeName.toLowerCase() + " " + badges.badgeIcon.toLowerCase() + " " + badges.badgeDescription.toLowerCase() + " " + badges.creatorName.toLowerCase();
       });
-      roster = roster.filter((player) => {
+      badgeList = badgeList.filter((badges) => {
         return badges.index.indexOf(search.toLowerCase()) > -1;
       });
 
@@ -87,5 +87,5 @@ export default async function handler(req, res) {
     res.setHeader("Access-Control-Allow-Origin", "*");
     res.setHeader("Access-Control-Allow-Methods", "GET,OPTIONS,PATCH,DELETE,POST,PUT");
     res.setHeader("Access-Control-Allow-Headers", "X-CSRF-Token, X-Requested-With, Accept, Accept-Version, Content-Length, Content-MD5, Content-Type, Date, X-Api-Version");
-    res.json(roster);
+    res.json(badgeList);
 }
