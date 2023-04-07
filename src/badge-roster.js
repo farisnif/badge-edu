@@ -20,7 +20,7 @@ export class BadgeRoster extends LitElement {
             this.badges = results;
         });
     }
-   
+
 
     static get styles() {
         return css`
@@ -36,9 +36,9 @@ export class BadgeRoster extends LitElement {
             }
             return [];
         })
-        .then((data) => {
-            return data;
-        });
+            .then((data) => {
+                return data;
+            });
 
         return results;
     }
@@ -52,7 +52,7 @@ export class BadgeRoster extends LitElement {
     render() {
         return html`
             <h2>${this.wiki}</h2>
-            <search-bar @value-changed="${this._handleSearchEvent}"></search-bar>
+            <search-bar placeholder="Search Content, Topics, and People" @value-changed="${this._handleSearchEvent}"></search-bar>
             <div class="wrapper">
             ${this.badges.map(badge => html`
             <div class="item">
