@@ -21,7 +21,7 @@ export default async function handler(req, res) {
             "badgeDescription": "Create an I AM account with MFA enabled and Admin permissions",
             "hyperLinkText": "Amazon IAM Info Link",
             "link": "https://docs.aws.amazon.com/cognito/latest/developerguide/tutorials.html",
-            "creatorName": "Joshua Hantman",
+            "creatorName": "Btopro",
             "badgeCompletionTime": "4.0 hours",
             "stepOne": "Creating your first Lambda Function",
             "stepTwo": "Putting in your Hello Lamda Node.js code",
@@ -35,14 +35,13 @@ export default async function handler(req, res) {
             "badgeDescription": "Learn how to create a root account with AWS Cloud Services and manage your AWS Console.",
             "hyperLinkText": "AWS Info Link",
             "link": "https://docs.aws.amazon.com/cognito/latest/developerguide/tutorials.html",
-            "creatorName": "Joshua Hantman",
+            "creatorName": "Joel Embiid",
             "badgeCompletionTime": "4.0 hours",
             "stepOne": "Creating your first Lambda Function",
             "stepTwo": "Putting in your Hello Lamda Node.js code",
             "hoursCompletionStepOne": "2.0 hours",
             "hoursCompletionStepTwo": "2.0 hours",
-            "pfpImg": "https://drupal.psu.edu/sites/default/files/styles/square-profile-portrait/public/headshot_0.jpg?itok=XWuUSEEP"
-
+            "pfpImg": "https://hoopshype.com/wp-content/uploads/sites/92/2021/09/i_31_5e_02_joel-embiid.png?w=1000&h=600&crop=1"
         },
         {
             "badgeName": "AWS-LAMBDA Phase 1",
@@ -65,7 +64,7 @@ export default async function handler(req, res) {
             "badgeDescription": "Amazon S3 is all about storage. Learning how to use it and add some static files to it are all part of this badge. S3 stands for Amazon Simple Storage Service. Getting started look through this page",
             "hyperLinkText": "Amazon S3 Info Link",
             "link": "https://docs.aws.amazon.com/s3/?id=docs_gateway",
-            "creatorName": "Joshua Hantman",
+            "creatorName": "Btopro",
             "badgeCompletionTime": "4.0 hours",
             "stepOne": "Creating your first Lambda Function",
             "stepTwo": "Putting in your Hello Lamda Node.js code",
@@ -77,10 +76,10 @@ export default async function handler(req, res) {
     ];
     badgeList.map((badges) => {
         badges.index = badges.badgeName.toLowerCase() + " " + badges.badgeIcon.toLowerCase() + " " + badges.badgeDescription.toLowerCase() + " " + badges.creatorName.toLowerCase();
-      });
-      badgeList = badgeList.filter((badges) => {
+    });
+    badgeList = badgeList.filter((badges) => {
         return badges.index.indexOf(search.toLowerCase()) > -1;
-      });
+    });
 
     res.setHeader('Cache-Control', 'max-age=0, s-maxage=1800');
     res.setHeader("Access-Control-Allow-Credentials", "true");
