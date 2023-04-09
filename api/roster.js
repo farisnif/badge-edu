@@ -31,7 +31,7 @@ export default async function handler(req, res) {
         },
         {
             "badgeName": "Signing up for AWS Web Services",
-            "badgeIcon": "https://www.nicepng.com/png/detail/27-278232_amazon-web-services-logo-png-transparent-amazon-web.png",
+            "badgeIcon": "https://i.pcmag.com/imagery/reviews/0179dSC1AqaTy8DbcTJMDYE-7..v1569472044.jpg",
             "badgeDescription": "Learn how to create a root account with AWS Cloud Services and manage your AWS Console.",
             "hyperLinkText": "AWS Info Link",
             "link": "https://docs.aws.amazon.com/cognito/latest/developerguide/tutorials.html",

@@ -10,6 +10,10 @@ export class BadgeRoster extends LitElement {
         return {
             badges: { type: Array },
             wiki: { type: String },
+            loadingImg:
+                { type: String },
+            loading:
+                { type: Boolean }
         }
     }
     constructor() {
@@ -19,13 +23,32 @@ export class BadgeRoster extends LitElement {
         this.getSearchResults().then((results) => {
             this.badges = results;
         });
+        this.loading = false;
+        this.loadingImg = "https://cdn.discordapp.com/attachments/434857360155213827/1094505354391461948/745856610882289665.png";
     }
 
 
     static get styles() {
         return css`
-       
-        `;
+                @keyframes loading-spin {
+                from {
+                    transform: rotate(0deg);
+                }
+                to {
+                    transform: rotate(360deg);
+                }
+            }
+            .loading-container {
+      display: inline;
+    }
+
+    .loading-sign {
+      width: 175px;
+      padding-top: 60px;
+      padding-bottom: 60px;
+      animation: loading-spin infinite 5s linear;
+    }
+     `;
     }
 
     async getSearchResults(value = '') {
@@ -48,6 +71,16 @@ export class BadgeRoster extends LitElement {
         this.badges = await this.getSearchResults(term);
     }
 
+
+    render() {
+        if (this.loading) {
+            return html`
+            <div class="loading-container">
+              <img src="${this.loadingImg}" class="loading-sign">
+            </div>
+          `;
+        }
+    }
 
     render() {
         return html`

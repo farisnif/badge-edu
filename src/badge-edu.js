@@ -55,7 +55,7 @@ export class BadgeEdu extends LitElement {
     pfpImg: {
       type: String,
       reflect: true
-    }
+    },
   };
 
   static get styles() {
@@ -209,7 +209,6 @@ export class BadgeEdu extends LitElement {
     }
       `;
   }
-
   firstUpdated() {
     const ach = this.shadowRoot.querySelector(".accord-header");
     ach.addEventListener("click", () => {
@@ -226,7 +225,6 @@ export class BadgeEdu extends LitElement {
         ach.style.borderRadius = "6px 6px 0px 0px";
         accordianContent.querySelector('.accord-body').style.borderRadius = "0px 0px 6px 6px";
       }
-
     }, false);
   }
 
@@ -251,42 +249,42 @@ export class BadgeEdu extends LitElement {
 
   render() {
     return html`
-      <div class="accordion-container">
-        <div class="accord-item">
-          <div class="accord-header">
-            <img class="image" src="${this.badgeIcon}" />
-            <div class="accord-title">${this.badgeName}</div>
-            <img class="dropDown"
-              src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB4AAAAeCAYAAAA7MK6iAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAd0lEQVR4nO3UQQqAIBBA0b8bvVci6Qm6/0WCmCBchOXoaj4IIujDhYLned7iArABWedLEmAHDh0ViLPRABQFSzMPK25aFWrX4gr0bhouL+g0XDpQc1w+oGa4/ECHcRlAh/Bs9Dafbz73bEiGX2HQs5LBWZ7neVydFqwUt0OcXE8AAAAASUVORK5CYII=" />
-          </div>
-          <div class="accord-content collapse">
-            <div class="accord-body">${this.badgeDescription}
-      
-              <div class="link"> <a href="link"> ${this.hyperLinkText} </a>
-              </div>
-              <div class="dottedlines">---------------------------------------------------------</div>
-              <div class="creator"> Badge Creator:</div>
-              <img class="pfp"
-                src="${this.pfpImg}"/>
-              <div class="creatorName">${this.creatorName}</div>
-              <div class="approxTime">Approximate time to complete: ${this.badgeCompletionTime}</div>
-              <div class="stepsBadge">Steps to Earn This Badge</div>
-              
-              <div class="firstStep">
-                <simple-icon-lite icon="av:play-circle-filled">
-                    </simple-icon-lite> ${this.stepOne}
-                  <div class="hoursCompletionStepOne">${this.hoursCompletionStepOne}</div>
-              </div>
-                <div class="secondStep">
+        <div class="accordion-wrapper">
+          <div class="accord-item">
+            <div class="accord-header">
+              <img class="image" src="${this.badgeIcon}" />
+              <div class="accord-title">${this.badgeName}</div>
+              <img class="dropDown"
+                src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB4AAAAeCAYAAAA7MK6iAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAd0lEQVR4nO3UQQqAIBBA0b8bvVci6Qm6/0WCmCBchOXoaj4IIujDhYLned7iArABWedLEmAHDh0ViLPRABQFSzMPK25aFWrX4gr0bhouL+g0XDpQc1w+oGa4/ECHcRlAh/Bs9Dafbz73bEiGX2HQs5LBWZ7neVydFqwUt0OcXE8AAAAASUVORK5CYII=" />
+            </div>
+            <div class="accord-content collapse">
+              <div class="accord-body">${this.badgeDescription}
+        
+                <div class="link"> <a href="link"> ${this.hyperLinkText} </a>
+                </div>
+                <div class="dottedlines">---------------------------------------------------------</div>
+                <div class="creator"> Badge Creator:</div>
+                <img class="pfp"
+                  src="${this.pfpImg}"/>
+                <div class="creatorName">${this.creatorName}</div>
+                <div class="approxTime">Approximate time to complete: ${this.badgeCompletionTime}</div>
+                <div class="stepsBadge">Steps to Earn This Badge</div>
+                
+                <div class="firstStep">
                   <simple-icon-lite icon="av:play-circle-filled">
-                    </simple-icon-lite> ${this.stepTwo}
-          <div class="hoursCompletionStepTwo">${this.hoursCompletionStepOne}</div>
+                      </simple-icon-lite> ${this.stepOne}
+                    <div class="hoursCompletionStepOne">${this.hoursCompletionStepOne}</div>
+                </div>
+                  <div class="secondStep">
+                    <simple-icon-lite icon="av:play-circle-filled">
+                      </simple-icon-lite> ${this.stepTwo}
+            <div class="hoursCompletionStepTwo">${this.hoursCompletionStepOne}</div>
+              </div>
             </div>
           </div>
         </div>
       </div>
-    </div>
-    `;
+      `;
   }
 }
 customElements.define('badge-edu', BadgeEdu);
