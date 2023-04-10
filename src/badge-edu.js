@@ -260,7 +260,7 @@ export class BadgeEdu extends LitElement {
             <div class="accord-content collapse">
               <div class="accord-body">${this.badgeDescription}
         
-                <div class="link"> <a href="link"> ${this.hyperLinkText} </a>
+                <div class="link"> <a href="${this.link}"> ${this.hyperLinkText} </a>
                 </div>
                 <div class="dottedlines">---------------------------------------------------------</div>
                 <div class="creator"> Badge Creator:</div>

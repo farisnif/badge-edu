@@ -72,7 +72,65 @@ export default async function handler(req, res) {
             "hoursCompletionStepTwo": "2.0 hours",
             "pfpImg": "https://drupal.psu.edu/sites/default/files/styles/square-profile-portrait/public/headshot_0.jpg?itok=XWuUSEEP"
 
-        }
+        },
+        {
+            "badgeName": "How to Spit Fire",
+            "badgeIcon": "https://i1.sndcdn.com/avatars-000062524911-k1a5hn-t500x500.jpg",
+            "badgeDescription": "First of all, he's not a rapper - so stop rappin at him",
+            "hyperLinkText": "Don't click it's too hot",
+            "link": "https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.youtube.com%2Fwatch%3Fv%3D9UAC2qkcrDY&psig=AOvVaw2La31sHXmbUsPJN01uyqjs&ust=1681171566964000&source=images&cd=vfe&ved=0CBAQjRxqFwoTCOjG66KCnv4CFQAAAAAdAAAAABAI",
+            "creatorName": "Suppa Hot Fire",
+            "badgeCompletionTime": "4.0 hours",
+            "stepOne": "Drip Out",
+            "stepTwo": "Obtaining Bars",
+            "hoursCompletionStepOne": "2.0 hours",
+            "hoursCompletionStepTwo": "2.0 hours",
+            "pfpImg": "https://i1.sndcdn.com/avatars-000062524911-k1a5hn-t500x500.jpg"
+
+        },
+        {
+            "badgeName": "How to be ready",
+            "badgeIcon": "https://i.ytimg.com/vi/Qv49SzzsZu8/maxresdefault.jpg",
+            "badgeDescription": "She wasn't ready.",
+            "hyperLinkText": "Go Sixers",
+            "link": "https://youtu.be/8Y5_Kuw1tXM",
+            "creatorName": "Kevin Hart",
+            "badgeCompletionTime": "4.0 hours",
+            "stepOne": "Be from Philly",
+            "stepTwo": "Be Kevin Hart",
+            "hoursCompletionStepOne": "2.0 hours",
+            "hoursCompletionStepTwo": "2.0 hours",
+            "pfpImg": "https://s1.ticketm.net/dam/a/199/2a4b8226-72c1-4571-9293-28e1192f0199_SOURCE"
+        },
+        {
+            "badgeName": "How to be like Ben",
+            "badgeIcon": "https://larrybrownsports.com/wp-content/uploads/2022/11/ben-simmons.jpg",
+            "badgeDescription": "Trae Young sent him to retirement.",
+            "hyperLinkText": "Go Sixers",
+            "link": "https://www.youtube.com/watch?v=-EHA4UhYuQY",
+            "creatorName": "Ben Brickons",
+            "badgeCompletionTime": "0.0 hours",
+            "stepOne": "Forget how to play basketball",
+            "stepTwo": "Miss your free throws",
+            "hoursCompletionStepOne": "0.2 hours",
+            "hoursCompletionStepTwo": "0.0 hours",
+            "pfpImg": "https://hoopshype.com/wp-content/uploads/sites/92/2021/09/i_06_75_7c_ben-simmons_98.png"
+        },
+        {
+            "badgeName": "How to Ascent",
+            "badgeIcon": "https://i1.sndcdn.com/artworks-000598289873-kk71ft-t500x500.jpg",
+            "badgeDescription": "It's all about the form.",
+            "hyperLinkText": "Anything's possible...anything's possible!",
+            "link": "https://www.youtube.com/watch?v=Wcz_kDCBTBk",
+            "creatorName": "Spongebob Garnett",
+            "badgeCompletionTime": "1.0 hours",
+            "stepOne": "Don't give up",
+            "stepTwo": "Be in IST256",
+            "hoursCompletionStepOne": "0.2 hours",
+            "hoursCompletionStepTwo": "2.0 hours",
+            "pfpImg": "https://a.espncdn.com/media/motion/2014/0415/dm_140415_nba_adam_silver_facetoface/dm_140415_nba_adam_silver_facetoface.jpg?w=1600"
+        },
+
     ];
     badgeList.map((badges) => {
         badges.index = badges.badgeName.toLowerCase() + " " + badges.badgeIcon.toLowerCase() + " " + badges.badgeDescription.toLowerCase() + " " + badges.creatorName.toLowerCase();
