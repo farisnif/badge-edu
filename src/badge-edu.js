@@ -271,12 +271,12 @@ export class BadgeEdu extends LitElement {
                 <div class="stepsBadge">Steps to Earn This Badge</div>
                 
                 <div class="firstStep">
-                  <simple-icon-lite icon="av:play-circle-filled">
+                  <simple-icon-lite icon="av:play-circle-outline">
                       </simple-icon-lite> ${this.stepOne}
                     <div class="hoursCompletionStepOne">${this.hoursCompletionStepOne}</div>
                 </div>
                   <div class="secondStep">
-                    <simple-icon-lite icon="av:play-circle-filled">
+                    <simple-icon-lite icon="av:play-circle-outline">
                       </simple-icon-lite> ${this.stepTwo}
             <div class="hoursCompletionStepTwo">${this.hoursCompletionStepOne}</div>
               </div>
